@@ -1,0 +1,28 @@
+﻿@using WebApplication3.Models
+@model List<User>
+
+<!-- Blog entries-->
+<div class="col-lg-8">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>E-poçt</th>
+                <th>Şifrə</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (User user in Model)
+            {
+                <tr>
+                    <td>@user.Name</td>
+                    <td>@user.Surname</td>
+                    <td>@user.Email</td>
+                    <td>@user.Password</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
